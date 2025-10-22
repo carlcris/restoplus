@@ -35,7 +35,7 @@ import { AppLayout } from '@/components/layouts/AppLayout';
 import { useInventory } from '@/contexts/InventoryContext';
 
 export default function InventoryPage() {
-  const { inventoryItems, addInventoryItem, updateInventoryItem } = useInventory();
+  const { inventoryItems, addInventoryItem } = useInventory();
   const [searchTerm, setSearchTerm] = useState('');
   const [filterCategory, setFilterCategory] = useState('all');
   const [filterStatus, setFilterStatus] = useState('all');

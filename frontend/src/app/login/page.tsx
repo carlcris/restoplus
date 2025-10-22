@@ -22,7 +22,7 @@ export default function LoginPage() {
     try {
       await login(email, password);
       router.push('/dashboard');
-    } catch (err) {
+    } catch {
       setError('Invalid email or password');
     }
   };

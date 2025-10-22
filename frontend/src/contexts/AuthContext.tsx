@@ -57,7 +57,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setUser(mockUser);
       localStorage.setItem('user', JSON.stringify(mockUser));
       localStorage.setItem('token', 'mock-jwt-token');
-    } catch (error) {
+    } catch {
       throw new Error('Invalid email or password');
     } finally {
       setLoading(false);

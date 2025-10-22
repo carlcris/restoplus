@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { AppLayout } from '@/components/layouts/AppLayout';
 import Link from 'next/link';
-import { ArrowUpRight, ArrowDownRight, TrendingUp } from 'lucide-react';
+import { ArrowUpRight, TrendingUp } from 'lucide-react';
 
 export default function DashboardPage() {
   return (

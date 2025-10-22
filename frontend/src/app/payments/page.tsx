@@ -44,7 +44,7 @@ import {
   Filter,
   ArrowUpDown,
 } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 
 type PaymentMethod = 'cash' | 'card' | 'split';
 type PaymentStatus = 'pending' | 'processing' | 'completed' | 'failed';
@@ -183,7 +183,7 @@ const mockPendingOrders: Order[] = [
 ];
 
 export default function PaymentsPage() {
-  const router = useRouter();
+  // const router = useRouter();
   const [pendingOrders, setPendingOrders] = useState<Order[]>(mockPendingOrders);
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
   const [isPaymentDialogOpen, setIsPaymentDialogOpen] = useState(false);
@@ -402,7 +402,7 @@ export default function PaymentsPage() {
                 </div>
                 <div>
                   <div className="text-2xl font-bold">₱1,245.50</div>
-                  <p className="text-sm text-gray-500">Today's Revenue</p>
+                  <p className="text-sm text-gray-500">Today&apos;s Revenue</p>
                 </div>
               </div>
             </CardContent>

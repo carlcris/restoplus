@@ -5,7 +5,7 @@ import { AppLayout } from '@/components/layouts/AppLayout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+// import { Badge } from '@/components/ui/badge';
 import { Label } from '@/components/ui/label';
 import {
   Select,
@@ -167,7 +167,7 @@ export default function NewOrderPage() {
                       <Input
                         placeholder="Enter customer name"
                         value={customerName}
-                        onChange={(e) => setCustomName(e.target.value)}
+                        onChange={(e) => setCustomerName(e.target.value)}
                       />
                     </div>
                   )}

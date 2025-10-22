@@ -462,7 +462,7 @@ export default function MenuPage() {
 
                     {recipeIngredients.length === 0 && (
                       <div className="text-center py-8 text-muted-foreground text-sm border-2 border-dashed rounded-lg">
-                        No ingredients added yet. Click "Add Ingredient" to start building the
+                        No ingredients added yet. Click &quot;Add Ingredient&quot; to start building the
                         recipe.
                       </div>
                     )}
