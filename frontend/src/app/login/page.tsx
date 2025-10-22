@@ -9,8 +9,8 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('admin@pragmatica.com');
+  const [password, setPassword] = useState('admin1234');
   const [error, setError] = useState('');
   const { login, loading } = useAuth();
   const router = useRouter();

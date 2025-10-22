@@ -35,14 +35,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const login = async (email: string, password: string) => {
     setLoading(true);
     try {
-      // TODO: Replace with actual GraphQL mutation
+      // Hardcoded admin credentials - only these credentials are allowed
+      const ADMIN_EMAIL = 'admin@pragmatica.com';
+      const ADMIN_PASSWORD = 'admin1234';
+
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
+      // Validate credentials
+      if (email !== ADMIN_EMAIL || password !== ADMIN_PASSWORD) {
+        throw new Error('Invalid credentials');
+      }
+
       const mockUser: User = {
         id: '1',
-        email,
-        name: 'Test User',
+        email: ADMIN_EMAIL,
+        name: 'Admin User',
         role: 'admin',
       };
 
@@ -50,7 +58,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       localStorage.setItem('user', JSON.stringify(mockUser));
       localStorage.setItem('token', 'mock-jwt-token');
     } catch (error) {
-      throw new Error('Login failed');
+      throw new Error('Invalid email or password');
     } finally {
       setLoading(false);
     }
